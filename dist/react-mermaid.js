@@ -17,6 +17,10 @@ var _mermaid2 = _interopRequireDefault(_mermaid);
 var Mermaid = _react2['default'].createClass({
   displayName: 'Mermaid',
 
+  propTypes: {
+    name: _react2['default'].PropTypes.string
+  },
+
   getDefaultProps: function getDefaultProps() {
     return {
       name: 'mermaid'

@@ -3,6 +3,10 @@ import mermaid, {mermaidAPI} from 'mermaid';
 
 const Mermaid = React.createClass({
 
+  propTypes: {
+    name: React.PropTypes.string
+  },
+
   getDefaultProps () {
     return {
       name: 'mermaid'
