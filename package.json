@@ -25,7 +25,7 @@
     "clean": "rm -rf dist && mkdir dist",
     "watch": "babel -w -d dist src",
     "preversion": "npm run clean && npm run build",
-    "postpublish": "git push && git push -tag"
+    "postpublish": "git push && git push --tag"
   },
   "dependencies": {
     "mermaid": "^0.5.1"
