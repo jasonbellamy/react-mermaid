@@ -1,6 +1,6 @@
 # React &lt;Mermaid&gt;
 
-> A react component to display mermaid diagrams and flowcharts.
+> A react component to display [mermaid](https://github.com/knsv/mermaid) diagrams and flowcharts.
 
 
 ## Getting Started
