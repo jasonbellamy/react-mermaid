@@ -1,19 +1,19 @@
 {
-  "name": "react-mermaid",
-  "description": "A react component to display mermaid diagrams and flowcharts.",
-  "version": "0.1.3",
-  "homepage": "https://github.com/jasonbellamy/react-mermaid",
+  "name": "react-mermaid-test-fix",
+  "description": "bugfix pull request for react-mermaid.",
+  "version": "0.1.4",
+  "homepage": "https://github.com/Sigfried/react-mermaid.git",
   "author": {
-    "name": "Jason Bellamy",
-    "email": "j@sonbellamy.com",
-    "url": "http://jasonbellamy.com"
+    "name": "Sigfried Gold",
+    "email": "sigfried@sigfried.org",
+    "url": "http://sigfried.org"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jasonbellamy/react-mermaid.git"
+    "url": "https://github.com/Sigfried/react-mermaid.git"
   },
   "bugs": {
-    "url": "https://github.com/jasonbellamy/react-mermaid/issues"
+    "url": "https://github.com/Sigfried/react-mermaid.git"
   },
   "license": "MIT",
   "main": "dist/react-mermaid",
@@ -28,7 +28,7 @@
     "postpublish": "git push && git push --tag"
   },
   "dependencies": {
-    "mermaid": "^0.5.1"
+    "mermaid": "^7.0.3"
   },
   "devDependencies": {
     "babel": "^5.8.9",
