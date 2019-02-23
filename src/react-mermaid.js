@@ -1,5 +1,5 @@
 import React from 'react';
-import mermaid, {mermaidAPI} from 'mermaid';
+import mermaid, { mermaidAPI } from 'mermaid';
 
 const Mermaid = React.createClass({
 
@@ -7,25 +7,25 @@ const Mermaid = React.createClass({
     name: React.PropTypes.string
   },
 
-  getDefaultProps () {
+  getDefaultProps() {
     return {
       name: 'mermaid'
     };
   },
 
-  getInitialState () {
+  getInitialState() {
     return {
       diagram: 'Loading diagram...'
     };
   },
 
-  componentDidMount () {
-    mermaidAPI.render(this.props.name, this.props.children.toString(), (html) => this.setState({diagram: html}));
+  componentDidMount() {
+    mermaidAPI.render(this.props.name, this.props.children.toString(), (html) => this.setState({ diagram: html }));
   },
 
-  render () {
+  render() {
     return (
-      <div className="mermaid" dangerouslySetInnerHTML={{__html: this.state.diagram}}></div>
+      <div className="mermaid" dangerouslySetInnerHTML={{ __html: this.state.diagram }}></div>
     )
   }
 });
