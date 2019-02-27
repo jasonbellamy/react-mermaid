@@ -1,33 +1,35 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import mermaid, { mermaidAPI } from 'mermaid';
 
-const Mermaid = React.createClass({
+mermaid.initialize({ startOnLoad: false });
 
-  propTypes: {
-    name: React.PropTypes.string
-  },
+export default class Mermaid extends Component {
+  static propTypes = {
+    name: PropTypes.string,
+    children: PropTypes.string.isRequired,
+  };
 
-  getDefaultProps() {
-    return {
-      name: 'mermaid'
-    };
-  },
-
-  getInitialState() {
-    return {
-      diagram: 'Loading diagram...'
-    };
-  },
-
-  componentDidMount() {
-    mermaidAPI.render(this.props.name, this.props.children.toString(), (html) => this.setState({ diagram: html }));
-  },
-
-  render() {
-    return (
-      <div className="mermaid" dangerouslySetInnerHTML={{ __html: this.state.diagram }}></div>
-    )
+  static defaultProps = {
+    name: 'mermaid',
   }
-});
 
-export default Mermaid;
+  constructor(props) {
+    super(props);
+    this.state = {
+      diagram: 'Loading diagram...',
+    };
+  }
+
+  componentDidMount = () => {
+    mermaidAPI.render(
+      this.props.name,
+      this.props.children.toString(),
+      diagram => this.setState({ diagram }),
+    );
+  }
+
+  render = () => (
+    <div className="mermaid" dangerouslySetInnerHTML={{ __html: this.state.diagram }} />
+  );
+}
