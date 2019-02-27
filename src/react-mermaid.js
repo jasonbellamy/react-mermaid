@@ -6,12 +6,14 @@ mermaid.initialize({ startOnLoad: false });
 
 export default class Mermaid extends Component {
   static propTypes = {
-    name: PropTypes.string,
     children: PropTypes.string.isRequired,
+    className: PropTypes.string,
+    name: PropTypes.string,
   };
 
   static defaultProps = {
     name: 'mermaid',
+    className: '',
   }
 
   constructor(props) {
@@ -30,6 +32,6 @@ export default class Mermaid extends Component {
   }
 
   render = () => (
-    <div className="mermaid" dangerouslySetInnerHTML={{ __html: this.state.diagram }} />
+    <div className={`mermaid ${this.props.className}`} dangerouslySetInnerHTML={{ __html: this.state.diagram }} />
   );
 }
