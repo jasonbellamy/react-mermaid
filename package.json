@@ -32,8 +32,7 @@
     "postpublish": "git push && git push --tag"
   },
   "dependencies": {
-    "mermaid": "^8.0.0",
-    "prop-types": "^15.7.2"
+    "mermaid": "^8.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -48,10 +47,12 @@
     "eslint-plugin-lodash": "^5.1.0",
     "eslint-plugin-react": "^7.12.4",
     "eslint-watch": "^4.0.2",
-    "react": "^16.8.3"
+    "react": "^16.8.3",
+    "prop-types": "^15.7.2"
   },
   "peerDependencies": {
-    "react": "^16.0.0"
+    "react": "^16.0.0",
+    "prop-types": "^15.7.2"
   },
   "keywords": [
     "react",
