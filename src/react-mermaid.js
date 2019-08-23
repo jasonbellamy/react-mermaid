@@ -1,5 +1,5 @@
 import React from 'react';
-import mermaid, {mermaidAPI} from 'mermaid';
+import mermaid, {mermaidAPI} from 'mermaid'; // eslint-disable-line
 
 const Mermaid = React.createClass({
 
