@@ -1,33 +1,37 @@
-import React from 'react';
-import mermaid, {mermaidAPI} from 'mermaid'; // eslint-disable-line
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import mermaid, { mermaidAPI } from 'mermaid';
 
-const Mermaid = React.createClass({
+mermaid.initialize({ startOnLoad: false });
 
-  propTypes: {
-    name: React.PropTypes.string
-  },
+export default class Mermaid extends Component {
+  static propTypes = {
+    children: PropTypes.string.isRequired,
+    className: PropTypes.string,
+    name: PropTypes.string,
+  };
 
-  getDefaultProps () {
-    return {
-      name: 'mermaid'
-    };
-  },
-
-  getInitialState () {
-    return {
-      diagram: 'Loading diagram...'
-    };
-  },
-
-  componentDidMount () {
-    mermaidAPI.render(this.props.name, this.props.children.toString(), (html) => this.setState({diagram: html}));
-  },
-
-  render () {
-    return (
-      <div className="mermaid" dangerouslySetInnerHTML={{__html: this.state.diagram}}></div>
-    )
+  static defaultProps = {
+    name: 'mermaid',
+    className: '',
   }
-});
 
-export default Mermaid;
+  constructor(props) {
+    super(props);
+    this.state = {
+      diagram: 'Loading diagram...',
+    };
+  }
+
+  componentDidMount = () => {
+    mermaidAPI.render(
+      this.props.name,
+      this.props.children.toString(),
+      diagram => this.setState({ diagram }),
+    );
+  }
+
+  render = () => (
+    <div className={`mermaid ${this.props.className}`} dangerouslySetInnerHTML={{ __html: this.state.diagram }} />
+  );
+}

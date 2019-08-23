@@ -2,20 +2,18 @@
 
 > A react component to display [mermaid](https://github.com/knsv/mermaid) diagrams and flowcharts.
 
-
 ## Getting Started
 
 - Install with [NPM](https://www.npmjs.org/) - `npm install --save react-mermaid`
 
-
 ## Usage
 
 ```javascript
-var React   = require('react');
-var Mermaid = require('react-mermaid');
+import React from 'react';
+import Mermaid from 'react-mermaid';
 
-var Component = React.createClass({
-  render: function () {
+class Component extends React.Component {
+  render() {
     return (
       <Mermaid name="diagram">
         graph TD;
@@ -26,16 +24,15 @@ var Component = React.createClass({
       </Mermaid>
     );
   }
-});
+};
 ```
 
 
 ## Options
 
-
-Property | Type     | Argument     | Default   | Description
----------|----------|--------------|-----------|------------
-name     | `string` | `<optional>` | `mermaid` | name of the diagram/flowchart
+| Property | Type     | Argument     | Default   | Description                   |
+| -------- | -------- | ------------ | --------- | ----------------------------- |
+| name     | `string` | `<optional>` | `mermaid` | name of the diagram/flowchart |
 
 
 ## Developing
@@ -48,9 +45,10 @@ npm run build
 
 
 ## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality.
+Run `npm run lint` to execute the `eslint` rules
+Run `npm run lint:watch` to watch the `src` directory with linting
 
 
 ## License
-Copyright (c) 2015 [Jason Bellamy ](http://jasonbellamy.com)  
+Copyright (c) 2015 [Jason Bellamy](http://jasonbellamy.com)
 Licensed under the MIT license.

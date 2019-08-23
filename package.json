@@ -1,7 +1,7 @@
 {
   "name": "react-mermaid",
   "description": "A react component to display mermaid diagrams and flowcharts.",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "homepage": "https://github.com/jasonbellamy/react-mermaid",
   "author": {
     "name": "Jason Bellamy",
@@ -21,23 +21,42 @@
     "node": ">= 0.10.0"
   },
   "scripts": {
-    "build": "babel -d dist src",
+    "babel": "babel src --out-dir dist",
+    "prebuild": "npm run lint",
+    "build": "npm run babel",
+    "build:watch": "npm run babel -- --watch",
     "clean": "rm -rf dist && mkdir dist",
-    "watch": "babel -w -d dist src",
+    "lint": "eslint src --color",
+    "lint:watch": "esw src --watch",
     "preversion": "npm run clean && npm run build",
     "postpublish": "git push && git push --tag"
   },
   "dependencies": {
     "@storybook/react": "^5.1.11",
-    "mermaid": "^7.0.3"
+    "mermaid": "^8.0.0"
   },
   "devDependencies": {
-    "babel": "^5.8.9",
-    "babel-loader": "^8.0.6",
     "core-js": "^0.9.6",
-    "react": "^0.13.3"
     "react-dom": "^16.9.0",
-    "react-scripts": "^3.1.1"
+    "react-scripts": "^3.1.1",
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.14.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-lodash": "^5.1.0",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-watch": "^4.0.2",
+    "react": "^16.8.3",
+    "prop-types": "^15.7.2"
+  },
+  "peerDependencies": {
+    "react": "^16.0.0",
+    "prop-types": "^15.7.2"
   },
   "keywords": [
     "react",
