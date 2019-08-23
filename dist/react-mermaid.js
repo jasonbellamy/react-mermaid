@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports["default"] = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -11,9 +11,9 @@ var _propTypes = _interopRequireDefault(require("prop-types"));
 
 var _mermaid = _interopRequireWildcard(require("mermaid"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj.default = obj; return newObj; } }
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {}; if (desc.get || desc.set) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } } newObj["default"] = obj; return newObj; } }
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -31,7 +31,7 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-_mermaid.default.initialize({
+_mermaid["default"].initialize({
   startOnLoad: false
 });
 
@@ -56,7 +56,7 @@ function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "render", function () {
-      return _react.default.createElement("div", {
+      return _react["default"].createElement("div", {
         className: "mermaid ".concat(_this.props.className),
         dangerouslySetInnerHTML: {
           __html: _this.state.diagram
@@ -73,12 +73,12 @@ function (_Component) {
   return Mermaid;
 }(_react.Component);
 
-exports.default = Mermaid;
+exports["default"] = Mermaid;
 
 _defineProperty(Mermaid, "propTypes", {
-  children: _propTypes.default.string.isRequired,
-  className: _propTypes.default.string,
-  name: _propTypes.default.string
+  children: _propTypes["default"].string.isRequired,
+  className: _propTypes["default"].string,
+  name: _propTypes["default"].string
 });
 
 _defineProperty(Mermaid, "defaultProps", {
