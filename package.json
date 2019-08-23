@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@storybook/react": "^5.1.11",
-    "mermaid": "^0.5.1"
+    "mermaid": "^7.0.3"
   },
   "devDependencies": {
     "babel": "^5.8.9",
