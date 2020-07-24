@@ -24,7 +24,7 @@ const Mermaid = ({
       mermaidAPI.render(
         name,
         children.toString(),
-        setDiagram,
+        svgCode => setDiagram(svgCode),
       );
     },
     [
