@@ -39,7 +39,9 @@ var Mermaid = function Mermaid(_ref) {
       setDiagram = _useState2[1];
 
   (0, _react.useEffect)(function () {
-    _mermaid.mermaidAPI.render(name, children.toString(), setDiagram);
+    _mermaid.mermaidAPI.render(name, children.toString(), function (svgCode) {
+      return setDiagram(svgCode);
+    });
   }, [name, children]);
   return _react.default.createElement("div", {
     className: "mermaid ".concat(className),
