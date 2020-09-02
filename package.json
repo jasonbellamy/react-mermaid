@@ -28,7 +28,7 @@
     "postpublish": "git push && git push --tag"
   },
   "dependencies": {
-    "mermaid": "^0.5.1"
+    "mermaid": "^8.7.0"
   },
   "devDependencies": {
     "babel": "^5.8.9",
