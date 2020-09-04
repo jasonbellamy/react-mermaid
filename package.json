@@ -33,7 +33,7 @@
   "devDependencies": {
     "babel": "^5.8.9",
     "core-js": "^0.9.6",
-    "react": "^0.13.3"
+    "react": "^16.13.1"
   },
   "keywords": [
     "react",
