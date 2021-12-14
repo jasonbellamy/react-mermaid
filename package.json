@@ -1,7 +1,7 @@
 {
   "name": "react-mermaid",
   "description": "A react component to display mermaid diagrams and flowcharts.",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "homepage": "https://github.com/jasonbellamy/react-mermaid",
   "author": {
     "name": "Jason Bellamy",
